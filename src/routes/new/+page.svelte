@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { noteStore } from '$lib/storage';
 	import { InputChip, Toast, getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
@@ -18,7 +19,7 @@
 		list = [];
 		content = '';
 		toastStore.trigger(t);
-		goto('/');
+		goto(base);
 	}
 </script>
 
