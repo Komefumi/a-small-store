@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { noteStore } from '$lib/storage';
 	import { getToastStore, type ModalSettings, getModalStore } from '@skeletonlabs/skeleton';
 
@@ -32,7 +33,7 @@
 <div class="container h-screen mx-auto gap-8 flex flex-col">
 	<div class="flex items-center justify-between">
 		<h2>Notes</h2>
-		<a href="/new" class="variant-ghost-primary btn rounded"> New Note </a>
+		<a href={`${base}/new`} class="variant-ghost-primary btn rounded"> New Note </a>
 	</div>
 	<div class="grid grid-cols-3 gap-4">
 		{#each $noteStore as note}
