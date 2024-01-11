@@ -49,7 +49,7 @@
 	<Navigation />
 </Drawer>
 
-<AppShell slotSidebarLeft="w-0 md:w-52 bg-surface-500/10">
+<AppShell slotSidebarLeft="w-0 md:w-52 bg-surface-500/10 min-h-screen">
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
