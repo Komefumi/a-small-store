@@ -1,5 +1,11 @@
 # Quick Skeleton UI Boilerplate
 
+## Live site
+
+Accessible at [https://komefumi.github.io/quick-skeleton-ui-boilerplate/](https://komefumi.github.io/quick-skeleton-ui-boilerplate/)
+
+## Quick Description
+
 This is a quick skeleton UI boilerplate made by following [this tutorial](https://www.youtube.com/watch?v=P_A0qQ7AuK8) by [Huntabyte](https://www.youtube.com/@Huntabyte)
 
 This showcases skeleton UI - a svelete + tailwind UI library - and acts as quick starting point for further application development.
