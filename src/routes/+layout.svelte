@@ -31,6 +31,8 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import Navigation from '../components/navigation.svelte';
+	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	initializeStores();
 
@@ -65,9 +67,13 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<Avatar
-					src="https://1.gravatar.com/avatar/99304de2adb36feb2679a7edf8e8daa21c9f7a90c6804f96c4e405fcff178ea8?size=256"
+					src="https://ui-avatars.com/api/?background=0D8ABC&color=fff"
 					width="w-14"
+					class="cursor-pointer"
 					rounded="rounded-full"
+					on:click={() => {
+						goto(`${base}/login`);
+					}}
 				/>
 			</svelte:fragment>
 		</AppBar>
@@ -76,7 +82,7 @@
 	<!-- (sidebarRight) -->
 	<!-- (pageHeader) -->
 	<!-- Router Slot -->
-	<div class="container p-10 mx-auto">
+	<div class="container h-full p-10 mx-auto">
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

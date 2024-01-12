@@ -23,7 +23,7 @@
 	}
 </script>
 
-<div class="container h-full mx-auto gap-8 flex flex-col">
+<div class="gap-8 flex flex-col">
 	<form class="card p-4 flex flex-col gap-3">
 		<h2>New Form</h2>
 		<textarea bind:value={content} class="textarea" rows="5" placeholder="Note Content" />
