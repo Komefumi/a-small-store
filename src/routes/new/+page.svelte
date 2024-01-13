@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { noteStore } from '$lib/storage';
-	import { InputChip, Toast, getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+	import { InputChip, getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
 	const toastStore = getToastStore();
 
