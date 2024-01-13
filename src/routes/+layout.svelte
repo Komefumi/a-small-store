@@ -33,6 +33,9 @@
 	import Navigation from '../component-lib/navigation.svelte';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+	import { supabase } from '$lib';
+	import { user } from '../store/auth';
 
 	initializeStores();
 
@@ -43,6 +46,21 @@
 	function openDrawer() {
 		drawerStore.open();
 	}
+
+	onMount(async () => {
+		const { data, error } = await supabase.auth.getUser();
+		const userFound = data.user;
+		if (error) {
+			console.error(error);
+		}
+		user.set(userFound);
+	});
+
+	supabase.auth.onAuthStateChange((_, session) => {
+		const foundUser = session?.user || null;
+		user.set(foundUser);
+		console.log({ foundUser });
+	});
 </script>
 
 <Toast position="tr" />

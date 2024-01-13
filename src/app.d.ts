@@ -7,3 +7,8 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+declare class OperationToastSettings {
+	success: ToastSettings;
+	error: ToastSettings;
+}
